@@ -1,4 +1,6 @@
 {
-	"singleQuote": true,
-	"quoteProps": "consistent"
+  "quoteProps": "consistent",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none"
 }
