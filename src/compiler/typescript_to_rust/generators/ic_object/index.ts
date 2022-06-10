@@ -23,6 +23,11 @@ export function generateIcObject(stableStorageVariableInfos: StableStorageVariab
                 0
             )
             .function(
+                _azle_method_name,
+                "method_name",
+                0
+            )
+            .function(
                 azle_ic_print,
                 "print",
                 0

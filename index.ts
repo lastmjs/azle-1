@@ -76,6 +76,7 @@ type ic = {
     };
     canisterBalance: () => nat64;
     id: () => Principal;
+    method_name: () => string;
     print: (...args: any) => void;
     // rawRand: () => nat8[]; // TODO I think we want this to really be a JS Uint8Array
     stableStorage: <T>() => T;

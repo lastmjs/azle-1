@@ -4,6 +4,7 @@ import { generateHead } from './head';
 import { generateIcObjectFunctionCaller } from './ic_object/functions/caller';
 import { generateIcObjectFunctionCanisterBalance } from './ic_object/functions/canister_balance';
 import { generateIcObjectFunctionId } from './ic_object/functions/id';
+import { generateIcObjectFunctionMethodName } from './ic_object/functions/method_name';
 import { generateIcObjectFunctionPrint } from './ic_object/functions/print';
 import { generateIcObjectFunctionTime } from './ic_object/functions/time';
 import { generateIcObjectFunctionTrap } from './ic_object/functions/trap';
@@ -66,6 +67,7 @@ export async function generateLibFile(
     const icObjectFunctionCaller: Rust = generateIcObjectFunctionCaller();
     const icObjectFunctionCanisterBalance: Rust = generateIcObjectFunctionCanisterBalance();
     const icObjectFunctionId: Rust = generateIcObjectFunctionId();
+    const icObjectFunctionMethodName: Rust = generateIcObjectFunctionMethodName();
     const icObjectFunctionPrint: Rust = generateIcObjectFunctionPrint();
     const icObjectFunctionTime: Rust = generateIcObjectFunctionTime();
     const icObjectFunctionTrap: Rust = generateIcObjectFunctionTrap();
@@ -92,6 +94,7 @@ export async function generateLibFile(
         ${icObjectFunctionCaller}
         ${icObjectFunctionCanisterBalance}
         ${icObjectFunctionId}
+        ${icObjectFunctionMethodName}
         ${icObjectFunctionPrint}
         ${icObjectFunctionTime}
         ${icObjectFunctionTrap}
