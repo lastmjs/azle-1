@@ -1,6 +1,7 @@
 import {
     ic,
     Principal,
+    nat,
     nat64,
     Query,
     Update
@@ -12,8 +13,13 @@ export function caller(): Query<Principal> {
 }
 
 // returns the amount of cycles available in the canister
-export function canisterBalance(): Query<nat64> {
-    return ic.canisterBalance();
+export function canister_balance(): Query<nat64> {
+    return ic.canister_balance();
+}
+
+// returns the amount of cycles available in the canister
+export function canister_balance128(): Query<nat> {
+    return ic.canister_balance128();
 }
 
 // returns this canister's id

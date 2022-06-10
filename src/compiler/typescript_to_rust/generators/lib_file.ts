@@ -3,6 +3,7 @@ import { generateCanisterMethodInit } from './canister_methods/init';
 import { generateHead } from './head';
 import { generateIcObjectFunctionCaller } from './ic_object/functions/caller';
 import { generateIcObjectFunctionCanisterBalance } from './ic_object/functions/canister_balance';
+import { generateIcObjectFunctionCanisterBalance128 } from './ic_object/functions/canister_balance128';
 import { generateIcObjectFunctionId } from './ic_object/functions/id';
 import { generateIcObjectFunctionMethodName } from './ic_object/functions/method_name';
 import { generateIcObjectFunctionPrint } from './ic_object/functions/print';
@@ -66,6 +67,7 @@ export async function generateLibFile(
 
     const icObjectFunctionCaller: Rust = generateIcObjectFunctionCaller();
     const icObjectFunctionCanisterBalance: Rust = generateIcObjectFunctionCanisterBalance();
+    const icObjectFunctionCanisterBalance128: Rust = generateIcObjectFunctionCanisterBalance128();
     const icObjectFunctionId: Rust = generateIcObjectFunctionId();
     const icObjectFunctionMethodName: Rust = generateIcObjectFunctionMethodName();
     const icObjectFunctionPrint: Rust = generateIcObjectFunctionPrint();
@@ -93,6 +95,7 @@ export async function generateLibFile(
 
         ${icObjectFunctionCaller}
         ${icObjectFunctionCanisterBalance}
+        ${icObjectFunctionCanisterBalance128}
         ${icObjectFunctionId}
         ${icObjectFunctionMethodName}
         ${icObjectFunctionPrint}

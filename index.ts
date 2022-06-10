@@ -74,7 +74,8 @@ type ic = {
     canisters: {
         [canisterName: string]: <T>(canisterId: Principal) => T;
     };
-    canisterBalance: () => nat64;
+    canister_balance: () => nat64;
+    canister_balance128: () => nat;
     id: () => Principal;
     method_name: () => string;
     print: (...args: any) => void;
